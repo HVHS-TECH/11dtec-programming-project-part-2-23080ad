@@ -30,16 +30,24 @@ function askUserSeats() {
     userSeats = prompt("hello " + testName + ", please enter how many seats you would like in your car" +
         "\nso that we can try and find a model that matches your reqirements?");
     if (userSeats == "" || userSeats == " " || userSeats == null || userSeats < MINSEATS || userSeats > MAXSEATS || isNaN(userSeats)) {
-        alert("invalid! \nYour input wasnt a number.");
+        alert("invalid! \nYour input wasnt a number in the range 1-9.");
         userSeats = askUserSeats();
     } else {
         alert(seatsPerCar[userSeats]);
-        seatsInCarCounter = userSeats
-        carReselect = prompt("does this car interest you?")
-        carReselect = askCarReselect();
+        console.log(userSeats)
+        if (seatsInCarCounter[3] || seatsInCarCounter[6] ) {
+             carReselect = askCarReselect();
+
+        } else {
+            if (confirm("does this car interest you?")) {
+                alert("hello")
+            } else {
+                carReselect = askCarReselect();
+            }
+
+        }
     }
 }
-
 
 
 
@@ -50,24 +58,15 @@ If they do not like their car it asks them if they would likr to look at another
 if they still say no it directs them off the site.
 ***************************************************************************************/
 function askCarReselect() {
-    if (userSeats == 3 || userSeats == 6) {
-        rentNewCar = prompt("would you like to rent another car")
-    } else {
-        if (carReselect == "yes") {
-            alert("Perfect")
-        } else if (carReselect == "no") {
-            reselectConfirm = prompt("Sorry, we dont have any more cars with " + seatsInCarCounter + " seats. \nWould you like to rent a different car?");
-            if (reselectConfirm == "no") {
-                alert("thank you for shopping at Robs Rentals, we will notify you via email when we restock our " + seatsInCarCounter + " seater range.")
-            } else if (reselectConfirm == "yes") {
-                userSeats = askUserSeats();
-            } else {
-                alert("I really dont understand sorry.")
-            }
+    if (seatsInCarCounter[3] || seatsInCarCounter[6]) {
+        if (confirm("would you like to rent a different car?")) {
+            userSeats = askUserSeats();
         } else {
-            alert("What are you saying?")
-
+            alert("Thank you for shopping at robs rentals! \nWe will notify you when we restock our " +  + "seater range." )
         }
+        
+    } else {
+        
     }
 
 }
