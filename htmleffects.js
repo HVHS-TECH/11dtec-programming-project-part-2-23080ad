@@ -1,4 +1,5 @@
 const seatPicker = document.getElementById('seatPicker');
+
 const allCars = ["place holder", "BAC Mono", "MX5", "place holder", "Mini", "Falcon", "place holder", "Outlander", "Estima"];
 /** 
 This function runs a loop which sorts through an array
@@ -23,8 +24,20 @@ function updateCarDetails() {
     carResult.innerHTML = "Number of seats: " + seatPicker.value;
 
     let carModel = document.getElementById('carModel');
-    carModel.innerHTML = "Car model: " + allCars[seatPicker.value];
+    carModel.innerHTML = "Suggested car model: " + allCars[seatPicker.value];
+ 
 }
+
+function rentInput(){
+    var testMessage ="renting for: ";
+    testMessage = testMessage + daysRented.value + " days";
+    testDisplay.innerHTML = testMessage;
+}
+
+var daysRented = {
+    type:"text"
+}
+
 
 seatsDropDown();
 
@@ -33,3 +46,4 @@ seatPicker.addEventListener('change', updateCarDetails);
 
 // Also update details on page load (if we want values shown on first load then uncomment this)
 //updateCarDetails();
+
