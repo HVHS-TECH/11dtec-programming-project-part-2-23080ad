@@ -13,12 +13,23 @@
     <h1> Seats</h1>
 
     <h2> Please fill out the below form <br>so you can rent the car thats right for you.</h2>
+    <p> Seats</p>
     <select id="seatPicker" name="seatPicker">
     </select>
     <p id="carResult"> </p>
-
     <p id="carModel"> </p>
 
+    <h3> Duration</h3>
+
+    <p id="daysRentedMessage"></p>
+
+    <form onsubmit="return false;">
+        <label for="daysRented">Days: </label><br>
+        <input type="text" id="daysRented"><br>
+        <input type="submit" onclick="rentInput()">
+    </form>
+
+    <p id="testDisplay"></p>
     <script src="htmleffects.js"></script>
 
 </body>

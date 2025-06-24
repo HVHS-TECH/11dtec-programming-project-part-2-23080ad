@@ -18,26 +18,22 @@ This function reads the value selected on the carSeats dropdown and apends that 
 This value is then displayed through a paragraph tag using innerHTML.
 **/
 
-
 function updateCarDetails() {
     let carResult = document.getElementById('carResult');
     carResult.innerHTML = "Number of seats: " + seatPicker.value;
 
     let carModel = document.getElementById('carModel');
     carModel.innerHTML = "Suggested car model: " + allCars[seatPicker.value];
- 
+
 }
 
-function rentInput(){
-    var testMessage ="renting for: ";
-    testMessage = testMessage + daysRented.value + " days";
-    testDisplay.innerHTML = testMessage;
+function rentInput() {
+    var daysRented = document.getElementById('daysRented');
+    var daysRentedMessage = document.getElementById('daysRentedMessage');
+    var Message = "Renting for: ";
+    Message = Message + daysRented.value + " days";
+    daysRentedMessage.innerHTML = Message;
 }
-
-var daysRented = {
-    type:"text"
-}
-
 
 seatsDropDown();
 
@@ -46,4 +42,3 @@ seatPicker.addEventListener('change', updateCarDetails);
 
 // Also update details on page load (if we want values shown on first load then uncomment this)
 //updateCarDetails();
-
