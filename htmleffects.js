@@ -28,25 +28,31 @@ function updateCarDetails() {
 
 }
 
+function nameInput() {
+    
+    var userName = document.getElementById('userName');
+    var userNameMessage = document.getElementById('userNameMessage');
+    var nameMessage = "User Name: ";
+    if (userName.value == "" || userName.value == " " || !isNaN(userName.value) ){
+        nameMessage = "Invalid input! <br>Input must be a word!";
+        userNameMessage.innerHTML = nameMessage;
+    } else {
+        nameMessage = nameMessage + userName.value;
+        userNameMessage.innerHTML = nameMessage;
+    }
+}
+
 /**
 When activated, this function updaates ID "daysRented"
 to the value entered in the "days rented" form.
  */
-/*function rentInput() {
-    var daysRented = document.getElementById('daysRented');
-    var daysRentedMessage = document.getElementById('daysRentedMessage');
-    var Message = "Renting for: ";
-    Message = Message + daysRented.value + " days";
-    daysRentedMessage.innerHTML = Message;
-}*/
-
 function rentInput() {
     
     var daysRented = document.getElementById('daysRented');
     var daysRentedMessage = document.getElementById('daysRentedMessage');
     var Message = "Renting for: ";
     if (daysRented.value == "" || daysRented.value == " " || daysRented.value < minDays || isNaN(daysRented.value) ){
-        Message = "Invalid input!";
+        Message = "Invalid input! <br>Input must be a number 1 or larger!";
         daysRentedMessage.innerHTML = Message;
     } else {
         Message = Message + daysRented.value + " days";
