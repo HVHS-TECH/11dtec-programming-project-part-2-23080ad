@@ -1,5 +1,6 @@
 const seatPicker = document.getElementById('seatPicker');
 
+const minDays = 1;
 const allCars = ["place holder", "BAC Mono", "MX5", "place holder", "Mini", "Falcon", "place holder", "Outlander", "Estima"];
 /** 
 This function runs a loop which sorts through an array
@@ -31,12 +32,26 @@ function updateCarDetails() {
 When activated, this function updaates ID "daysRented"
 to the value entered in the "days rented" form.
  */
-function rentInput() {
+/*function rentInput() {
     var daysRented = document.getElementById('daysRented');
     var daysRentedMessage = document.getElementById('daysRentedMessage');
     var Message = "Renting for: ";
     Message = Message + daysRented.value + " days";
     daysRentedMessage.innerHTML = Message;
+}*/
+
+function rentInput() {
+    
+    var daysRented = document.getElementById('daysRented');
+    var daysRentedMessage = document.getElementById('daysRentedMessage');
+    var Message = "Renting for: ";
+    if (daysRented.value == "" || daysRented.value == " " || daysRented.value < minDays || isNaN(daysRented.value) ){
+        Message = "Invalid input!";
+        daysRentedMessage.innerHTML = Message;
+    } else {
+        Message = Message + daysRented.value + " days";
+        daysRentedMessage.innerHTML = Message;
+    }
 }
 
 seatsDropDown();
