@@ -22,11 +22,12 @@
     <h3> Duration</h3>
 
     <p id="daysRentedMessage"></p>
-
+   
+    <!---- using "for" for accessibility reasons--> 
     <form onsubmit="return false;">
         <label for="daysRented">Days: </label><br>
-        <input type="text" id="daysRented"><br>
-        <input type="submit" onclick="rentInput()">
+        <input type="text" id="daysRented" required><br>
+        <input type="submit" onclick="rentInput()" >
     </form>
 
     <p id="testDisplay"></p>

@@ -27,6 +27,10 @@ function updateCarDetails() {
 
 }
 
+/**
+When activated, this function updaates ID "daysRented"
+to the value entered in the "days rented" form.
+ */
 function rentInput() {
     var daysRented = document.getElementById('daysRented');
     var daysRentedMessage = document.getElementById('daysRentedMessage');
