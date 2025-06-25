@@ -23,22 +23,25 @@
         <input type="submit" onclick="nameInput()" >
     </form>
 
-    <p> Seats</p>
+    <h3> Seats</h3>
     <select id="seatPicker" name="seatPicker">
     </select>
     <p id="carResult"> </p>
     <p id="carModel"> </p>
 
-    <h4> Duration</h4>
+    <h3> Duration</h3>
 
     <p id="daysRentedMessage"></p>
    
     <!---- using "for" for accessibility reasons--> 
     <form onsubmit="return false;">
         <label for="daysRented">Days: </label><br>
-        <input type="text" id="daysRented" required><br>
+        <input type="number" id="daysRented" required><br>
         <input type="submit" onclick="rentInput()" >
     </form>
+
+    <img src="BAC-mono.png" alt="BAC-mono">
+    <img src="MX5.png" alt="MX5">
 
     <p id="testDisplay"></p>
     <script src="htmleffects.js"></script>

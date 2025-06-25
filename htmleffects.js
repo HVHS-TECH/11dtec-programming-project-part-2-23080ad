@@ -28,6 +28,10 @@ function updateCarDetails() {
 
 }
 
+/**
+When activated, this function updates ID "nameInput"
+to the value entered in the "name input" form.
+ */
 function nameInput() {
     
     var userName = document.getElementById('userName');
@@ -43,7 +47,7 @@ function nameInput() {
 }
 
 /**
-When activated, this function updaates ID "daysRented"
+When activated, this function updates ID "daysRented"
 to the value entered in the "days rented" form.
  */
 function rentInput() {
@@ -51,7 +55,7 @@ function rentInput() {
     var daysRented = document.getElementById('daysRented');
     var daysRentedMessage = document.getElementById('daysRentedMessage');
     var Message = "Renting for: ";
-    if (daysRented.value == "" || daysRented.value == " " || daysRented.value < minDays || isNaN(daysRented.value) ){
+    if (daysRented.value == "" || daysRented.value == " " || daysRented.value < minDays){
         Message = "Invalid input! <br>Input must be a number 1 or larger!";
         daysRentedMessage.innerHTML = Message;
     } else {
@@ -59,6 +63,8 @@ function rentInput() {
         daysRentedMessage.innerHTML = Message;
     }
 }
+
+
 
 seatsDropDown();
 
