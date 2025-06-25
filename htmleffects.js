@@ -64,6 +64,15 @@ function rentInput() {
     }
 }
 
+var img = document.createElement('img');
+        img.src = 'BAC-mono.png';
+        img.alt = 'Placeholder image';
+        img.className = 'my-image';
+        img.id = 'image1';
+
+        document.getElementById('imageContainer').appendChild(img);
+
+
 
 
 seatsDropDown();
