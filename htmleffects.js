@@ -33,11 +33,11 @@ When activated, this function updates ID "nameInput"
 to the value entered in the "name input" form.
  */
 function nameInput() {
-    
+
     var userName = document.getElementById('userName');
     var userNameMessage = document.getElementById('userNameMessage');
     var nameMessage = "User Name: ";
-    if (userName.value == "" || userName.value == " " || !isNaN(userName.value) ){
+    if (userName.value == "" || userName.value == " " || !isNaN(userName.value)) {
         nameMessage = "Invalid input! <br>Input must be a word!";
         userNameMessage.innerHTML = nameMessage;
     } else {
@@ -51,11 +51,11 @@ When activated, this function updates ID "daysRented"
 to the value entered in the "days rented" form.
  */
 function rentInput() {
-    
+
     var daysRented = document.getElementById('daysRented');
     var daysRentedMessage = document.getElementById('daysRentedMessage');
     var Message = "Renting for: ";
-    if (daysRented.value == "" || daysRented.value == " " || daysRented.value < minDays){
+    if (daysRented.value == "" || daysRented.value == " " || daysRented.value < minDays) {
         Message = "Invalid input! <br>Input must be a number 1 or larger!";
         daysRentedMessage.innerHTML = Message;
     } else {
@@ -64,61 +64,72 @@ function rentInput() {
     }
 }
 
-
+/** 
 //Bac-mono image javascript
 var img = document.createElement('img');
-        img.src = 'BAC-mono.png';
-        img.alt = 'Placeholder image';
-        img.className = 'my-image';
-        img.id = 'image1';
+img.src = 'BAC-mono.png';
+img.alt = 'Placeholder image';
+img.className = 'my-image';
+img.id = 'image1';
 
-        document.getElementById('BAC-mono').appendChild(img);
+document.getElementById('BAC-mono').appendChild(img);
 
 //MX5 image javascript
 var img = document.createElement('img');
-        img.src = 'MX5.png';
-        img.alt = 'Placeholder image';
-        img.className = 'my-image';
-        img.id = 'image1';
+img.src = 'MX5.png';
+img.alt = 'Placeholder image';
+img.className = 'my-image';
+img.id = 'image1';
 
-        document.getElementById('MX5').appendChild(img);
+document.getElementById('MX5').appendChild(img);
 
 //MINI image javascript        
 var img = document.createElement('img');
-        img.src = 'MINI.png';
-        img.alt = 'Placeholder image';
-        img.className = 'my-image';
-        img.id = 'image1';
+img.src = 'MINI.png';
+img.alt = 'Placeholder image';
+img.className = 'my-image';
+img.id = 'image1';
 
-        document.getElementById('MINI').appendChild(img);
+document.getElementById('MINI').appendChild(img);
 
 //Falcon image javascript
 var img = document.createElement('img');
-        img.src = 'Falcon.png';
-        img.alt = 'Placeholder image';
-        img.className = 'my-image';
-        img.id = 'image1';
+img.src = 'Falcon.png';
+img.alt = 'Placeholder image';
+img.className = 'my-image';
+img.id = 'image1';
 
-        document.getElementById('Falcon').appendChild(img);
+document.getElementById('Falcon').appendChild(img);
 
 //Outlander image javascript
 var img = document.createElement('img');
-        img.src = 'Outlander.png';
-        img.alt = 'Placeholder image';
-        img.className = 'my-image';
-        img.id = 'image1';
+img.src = 'Outlander.png';
+img.alt = 'Placeholder image';
+img.className = 'my-image';
+img.id = 'image1';
 
-        document.getElementById('Outlander').appendChild(img);
+document.getElementById('Outlander').appendChild(img);
 
 //Estima image javascript        
 var img = document.createElement('img');
-        img.src = 'Estima.png';
-        img.alt = 'Placeholder image';
-        img.className = 'my-image';
-        img.id = 'image1';
+img.src = 'Estima.png';
+img.alt = 'Placeholder image';
+img.className = 'my-image';
+img.id = 'image1';
 
-        document.getElementById('Estima').appendChild(img);
+document.getElementById('Estima').appendChild(img);
+*/
+const carImages = document.getElementById('carImages');
 
+
+function imagesTest() {
+    let imageCars = ["BAC-ono", "MX5", "MINI", "Falcon", "Outlander", "Estima"];
+    for (let i = 0; i < imageCars.length; i++) {
+        var newImage = '<div id="' + imageCars[i] + '">' + '</div>';
+        carImages.innerHTML += newImage;
+    }
+}
+imagesTest();    
 
 seatsDropDown();
 

@@ -14,43 +14,56 @@
 
     <h2> Please fill out the below form <br>so you can rent the car thats right for you.</h2>
     <h3> Name</h3>
-    
+
     <p id="userNameMessage"></p>
 
     <form onsubmit="return false;">
         <label for="userName">name: </label><br>
         <input type="text" id="userName" required><br>
-        <input type="submit" onclick="nameInput()" >
+        <input type="submit" onclick="nameInput()">
     </form>
 
     <h3> Seats</h3>
     <select id="seatPicker" name="seatPicker">
     </select>
     <p id="carResult"> </p>
-    
+
     <!--<p id="carModel"> </p>-->
 
     <h3> Duration</h3>
 
     <p id="daysRentedMessage"></p>
-   
-    <!---- using "for" for accessibility reasons--> 
+
+    <!---- using "for" for accessibility reasons-->
     <form onsubmit="return false;">
         <label for="daysRented">Days: </label><br>
         <input type="number" id="daysRented" required><br>
-        <input type="submit" onclick="rentInput()" >
+        <input type="submit" onclick="rentInput()">
     </form>
 
     <h4 id="carModel"> </h4>
 
+    <!-- 
     <div id="BAC-mono"></div>
-    <div id="MX5"></div>
-    <div id="MINI"></div>
-    <div id="Falcon"></div>
-    <div id="Outlander"></div>
-    <div id="Estima"></div>
+    <h4> BAC-mono</h4>
 
-    <p id="testDisplay"></p>
+    <div id="MX5"></div>
+    <h4> MX5</h4>
+
+    <div id="MINI"></div>
+    <h4> MINI</h4>
+
+    <div id="Falcon"></div>
+    <h4> Falcon</h4>
+
+    <div id="Outlander"></div>
+    <h4> Outlander</h4>
+
+    <div id="Estima"></div>
+    <h4> Estima</h4>
+-->
+    <div id="carImages"> </div>
+    <!--<p id="testDisplay"></p>-->
     <script src="htmleffects.js"></script>
 
 </body>
