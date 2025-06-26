@@ -64,15 +64,60 @@ function rentInput() {
     }
 }
 
+
+//Bac-mono image javascript
 var img = document.createElement('img');
         img.src = 'BAC-mono.png';
         img.alt = 'Placeholder image';
         img.className = 'my-image';
         img.id = 'image1';
 
-        document.getElementById('imageContainer').appendChild(img);
+        document.getElementById('BAC-mono').appendChild(img);
 
+//MX5 image javascript
+var img = document.createElement('img');
+        img.src = 'MX5.png';
+        img.alt = 'Placeholder image';
+        img.className = 'my-image';
+        img.id = 'image1';
 
+        document.getElementById('MX5').appendChild(img);
+
+//MINI image javascript        
+var img = document.createElement('img');
+        img.src = 'MINI.png';
+        img.alt = 'Placeholder image';
+        img.className = 'my-image';
+        img.id = 'image1';
+
+        document.getElementById('MINI').appendChild(img);
+
+//Falcon image javascript
+var img = document.createElement('img');
+        img.src = 'Falcon.png';
+        img.alt = 'Placeholder image';
+        img.className = 'my-image';
+        img.id = 'image1';
+
+        document.getElementById('Falcon').appendChild(img);
+
+//Outlander image javascript
+var img = document.createElement('img');
+        img.src = 'Outlander.png';
+        img.alt = 'Placeholder image';
+        img.className = 'my-image';
+        img.id = 'image1';
+
+        document.getElementById('Outlander').appendChild(img);
+
+//Estima image javascript        
+var img = document.createElement('img');
+        img.src = 'Estima.png';
+        img.alt = 'Placeholder image';
+        img.className = 'my-image';
+        img.id = 'image1';
+
+        document.getElementById('Estima').appendChild(img);
 
 
 seatsDropDown();
