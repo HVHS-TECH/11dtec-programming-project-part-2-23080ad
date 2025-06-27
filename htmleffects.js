@@ -1,7 +1,7 @@
 const seatPicker = document.getElementById('seatPicker');
 
-const minDays = 1;
-const allCars = ["place holder", "BAC Mono", "MX5", "place holder", "Mini", "Falcon", "place holder", "Outlander", "Estima"];
+
+const allCars = ["There are no 0 seated cars in existence", "BAC Mono", "MX5", "i30", "Mini", "Falcon", "Prado", "Outlander", "Estima"];
 /** 
 This function runs a loop which sorts through an array
 and makes each individual value of it an option for a select tag using innerHTML.
@@ -51,12 +51,13 @@ When activated, this function updates ID "daysRented"
 to the value entered in the "days rented" form.
  */
 function rentInput() {
-
+    const minDays = 1;
+    const maxDays = 31;
     var daysRented = document.getElementById('daysRented');
     var daysRentedMessage = document.getElementById('daysRentedMessage');
     var Message = "Renting for: ";
-    if (daysRented.value == "" || daysRented.value == " " || daysRented.value < minDays) {
-        Message = "Invalid input! <br>Input must be a number 1 or larger!";
+    if (daysRented.value == "" || daysRented.value == " " || daysRented.value < minDays || daysRented.value > maxDays) {
+        Message = "Invalid input! <br>Input must be a number between 1 and 31!";
         daysRentedMessage.innerHTML = Message;
     } else {
         Message = Message + daysRented.value + " days";
@@ -64,7 +65,7 @@ function rentInput() {
     }
 }
 
-/** 
+
 //Bac-mono image javascript
 var img = document.createElement('img');
 img.src = 'BAC-mono.png';
@@ -80,8 +81,17 @@ img.src = 'MX5.png';
 img.alt = 'Placeholder image';
 img.className = 'my-image';
 img.id = 'image1';
-
+seatsInCarCounter= 3;
 document.getElementById('MX5').appendChild(img);
+
+//i30 image javascript
+var img = document.createElement('img');
+img.src = 'i30.png';
+img.alt = 'Placeholder image';
+img.className = 'my-image';
+img.id = 'image1';
+
+document.getElementById('i30').appendChild(img);
 
 //MINI image javascript        
 var img = document.createElement('img');
@@ -101,6 +111,15 @@ img.id = 'image1';
 
 document.getElementById('Falcon').appendChild(img);
 
+//Falcon image javascript
+var img = document.createElement('img');
+img.src = 'Prado.png';
+img.alt = 'Placeholder image';
+img.className = 'my-image';
+img.id = 'image1';
+
+document.getElementById('Prado').appendChild(img);
+
 //Outlander image javascript
 var img = document.createElement('img');
 img.src = 'Outlander.png';
@@ -118,18 +137,12 @@ img.className = 'my-image';
 img.id = 'image1';
 
 document.getElementById('Estima').appendChild(img);
-*/
-const carImages = document.getElementById('carImages');
-
-
-function imagesTest() {
-    let imageCars = ["BAC-ono", "MX5", "MINI", "Falcon", "Outlander", "Estima"];
-    for (let i = 0; i < imageCars.length; i++) {
-        var newImage = '<div id="' + imageCars[i] + '">' + '</div>';
-        carImages.innerHTML += newImage;
-    }
+   
+function carOutPut() {
+    let checkOut = document.getElementById('checkOut');
+    checkOut= seatsInCarCounter;
+    selectedCar.innerHTML = checkOut;
 }
-imagesTest();    
 
 seatsDropDown();
 
