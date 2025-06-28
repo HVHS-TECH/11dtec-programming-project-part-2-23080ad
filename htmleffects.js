@@ -72,7 +72,7 @@ img.src = 'BAC-mono.png';
 img.alt = 'Placeholder image';
 img.className = 'my-image';
 img.id = 'image1';
-
+seatsInCarCounter = 1;
 document.getElementById('BAC-mono').appendChild(img);
 
 //MX5 image javascript
@@ -81,7 +81,7 @@ img.src = 'MX5.png';
 img.alt = 'Placeholder image';
 img.className = 'my-image';
 img.id = 'image1';
-seatsInCarCounter= 3;
+seatsInCarCounter = 2;
 document.getElementById('MX5').appendChild(img);
 
 //i30 image javascript
@@ -90,7 +90,7 @@ img.src = 'i30.png';
 img.alt = 'Placeholder image';
 img.className = 'my-image';
 img.id = 'image1';
-
+seatsInCarCounter = 3;
 document.getElementById('i30').appendChild(img);
 
 //MINI image javascript        
@@ -99,7 +99,7 @@ img.src = 'MINI.png';
 img.alt = 'Placeholder image';
 img.className = 'my-image';
 img.id = 'image1';
-
+seatsInCarCounter = 4;
 document.getElementById('MINI').appendChild(img);
 
 //Falcon image javascript
@@ -108,16 +108,16 @@ img.src = 'Falcon.png';
 img.alt = 'Placeholder image';
 img.className = 'my-image';
 img.id = 'image1';
-
+seatsInCarCounter = 5;
 document.getElementById('Falcon').appendChild(img);
 
-//Falcon image javascript
+//Prado image javascript
 var img = document.createElement('img');
 img.src = 'Prado.png';
 img.alt = 'Placeholder image';
 img.className = 'my-image';
 img.id = 'image1';
-
+seatsInCarCounter = 6;
 document.getElementById('Prado').appendChild(img);
 
 //Outlander image javascript
@@ -126,7 +126,7 @@ img.src = 'Outlander.png';
 img.alt = 'Placeholder image';
 img.className = 'my-image';
 img.id = 'image1';
-
+seatsInCarCounter = 7;
 document.getElementById('Outlander').appendChild(img);
 
 //Estima image javascript        
@@ -135,12 +135,13 @@ img.src = 'Estima.png';
 img.alt = 'Placeholder image';
 img.className = 'my-image';
 img.id = 'image1';
-
+seatsInCarCounter = 8;
 document.getElementById('Estima').appendChild(img);
-   
+
 function carOutPut() {
+    const seatsForCheckOut = [1, 2, 3, 4 ,5 ,6 ,7 ,8];
     let checkOut = document.getElementById('checkOut');
-    checkOut= seatsInCarCounter;
+    checkOut = seatsInCarCounter;
     selectedCar.innerHTML = checkOut;
 }
 
