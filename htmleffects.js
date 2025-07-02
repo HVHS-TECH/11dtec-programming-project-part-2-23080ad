@@ -1,5 +1,5 @@
 const seatPicker = document.getElementById('seatPicker');
-
+var carSelect;
 
 const allCars = ["There are no 0 seated cars in existence", "BAC Mono", "MX5", "i30", "Mini", "Falcon", "Prado", "Outlander", "Estima"];
 /** 
@@ -72,7 +72,7 @@ img.src = 'BAC-mono.png';
 img.alt = 'Placeholder image';
 img.className = 'my-image';
 img.id = 'image1';
-seatsInCarCounter = 1;
+
 document.getElementById('BAC-mono').appendChild(img);
 
 //MX5 image javascript
@@ -80,8 +80,8 @@ var img = document.createElement('img');
 img.src = 'MX5.png';
 img.alt = 'Placeholder image';
 img.className = 'my-image';
-img.id = 'image1';
-seatsInCarCounter = 2;
+img.id = 'image2';
+
 document.getElementById('MX5').appendChild(img);
 
 //i30 image javascript
@@ -89,8 +89,8 @@ var img = document.createElement('img');
 img.src = 'i30.png';
 img.alt = 'Placeholder image';
 img.className = 'my-image';
-img.id = 'image1';
-seatsInCarCounter = 3;
+img.id = 'image3';
+
 document.getElementById('i30').appendChild(img);
 
 //MINI image javascript        
@@ -98,8 +98,8 @@ var img = document.createElement('img');
 img.src = 'MINI.png';
 img.alt = 'Placeholder image';
 img.className = 'my-image';
-img.id = 'image1';
-seatsInCarCounter = 4;
+img.id = 'image4';
+
 document.getElementById('MINI').appendChild(img);
 
 //Falcon image javascript
@@ -107,8 +107,8 @@ var img = document.createElement('img');
 img.src = 'Falcon.png';
 img.alt = 'Placeholder image';
 img.className = 'my-image';
-img.id = 'image1';
-seatsInCarCounter = 5;
+img.id = 'image5';
+
 document.getElementById('Falcon').appendChild(img);
 
 //Prado image javascript
@@ -116,8 +116,8 @@ var img = document.createElement('img');
 img.src = 'Prado.png';
 img.alt = 'Placeholder image';
 img.className = 'my-image';
-img.id = 'image1';
-seatsInCarCounter = 6;
+img.id = 'image6';
+
 document.getElementById('Prado').appendChild(img);
 
 //Outlander image javascript
@@ -125,8 +125,8 @@ var img = document.createElement('img');
 img.src = 'Outlander.png';
 img.alt = 'Placeholder image';
 img.className = 'my-image';
-img.id = 'image1';
-seatsInCarCounter = 7;
+img.id = 'image7';
+
 document.getElementById('Outlander').appendChild(img);
 
 //Estima image javascript        
@@ -134,14 +134,63 @@ var img = document.createElement('img');
 img.src = 'Estima.png';
 img.alt = 'Placeholder image';
 img.className = 'my-image';
-img.id = 'image1';
-seatsInCarCounter = 8;
+img.id = 'image8';
+
 document.getElementById('Estima').appendChild(img);
 
-function carOutPut() {
-    const seatsForCheckOut = [1, 2, 3, 4 ,5 ,6 ,7 ,8];
+//These functions update id "selectedCar" so that it displays what car teh user has selected.
+function carOutPut1() {
+    let carSelect = "BACmono";
     let checkOut = document.getElementById('checkOut');
-    checkOut = seatsInCarCounter;
+    checkOut = "You have selected the " + carSelect + ".";
+    selectedCar.innerHTML = checkOut;
+}
+
+function carOutPut2() {
+    let carSelect = "MX5";
+    let checkOut = document.getElementById('checkOut');
+    checkOut = "You have selected the " + carSelect + ".";
+    selectedCar.innerHTML = checkOut;
+}
+
+function carOutPut3() {
+    let carSelect = "i30";
+    let checkOut = document.getElementById('checkOut');
+    checkOut = "You have selected the " + carSelect + ".";
+    selectedCar.innerHTML = checkOut;
+}
+
+function carOutPut4() {
+    let carSelect = "Mini";
+    let checkOut = document.getElementById('checkOut');
+    checkOut = "You have selected the " + carSelect + ".";
+    selectedCar.innerHTML = checkOut;
+}
+function carOutPut5() {
+    let carSelect = "Falcon";
+    let checkOut = document.getElementById('checkOut');
+    checkOut = "You have selected the " + carSelect + ".";
+    selectedCar.innerHTML = checkOut;
+}
+
+function carOutPut6() {
+    let carSelect = "Prado";
+    let checkOut = document.getElementById('checkOut');
+    checkOut = "You have selected the " + carSelect + ".";
+    selectedCar.innerHTML = checkOut;
+}
+
+function carOutPut7() {
+    let carSelect = "Outlander";
+    let checkOut = document.getElementById('checkOut');
+    checkOut = "You have selected the " + carSelect + ".";
+    selectedCar.innerHTML = checkOut;
+}
+
+function carOutPut8() {
+    let carSelect = "Estima";
+    let checkOut = document.getElementById('checkOut');
+    checkOut = "You have selected the " + carSelect + ".";
     selectedCar.innerHTML = checkOut;
 }
 
