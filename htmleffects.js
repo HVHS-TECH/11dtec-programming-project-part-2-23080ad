@@ -55,13 +55,13 @@ function rentInput() {
     const maxDays = 31;
     var daysRented = document.getElementById('daysRented');
     var daysRentedMessage = document.getElementById('daysRentedMessage');
-    var Message = "Renting for: ";
+    var rentFor = "Renting for: ";
     if (daysRented.value == "" || daysRented.value == " " || daysRented.value < minDays || daysRented.value > maxDays) {
-        Message = "Invalid input! <br>Input must be a number between 1 and 31!";
-        daysRentedMessage.innerHTML = Message;
+        rentFor = "Invalid input! <br>Input must be a number between 1 and 31!";
+        daysRentedMessage.innerHTML = rentFor;
     } else {
-        Message = Message + daysRented.value + " days";
-        daysRentedMessage.innerHTML = Message;
+        rentFor = rentFor + daysRented.value + " days";
+        daysRentedMessage.innerHTML = rentFor;
     }
 }
 
@@ -192,6 +192,13 @@ function carOutPut8() {
     let checkOut = document.getElementById('checkOut');
     checkOut = "You have selected the " + carSelect + ".";
     selectedCar.innerHTML = checkOut;
+}
+
+
+function checkOut( ){
+    var rentTotal = daysRented * 10;
+    var userReceipt = "Youre final cost totals at: $" + rentTotal;
+    totalCost.innerHTML = userReceipt;
 }
 
 seatsDropDown();

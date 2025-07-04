@@ -5,7 +5,7 @@
     <title>Rent-A-Car</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -27,19 +27,6 @@
     <select id="seatPicker" name="seatPicker">
     </select>
     <p id="carResult"> </p>
-
-    <!--<p id="carModel"> </p>-->
-
-    <h3> Duration</h3>
-
-    <p id="daysRentedMessage"></p>
-
-    <!---- using "for" for accessibility reasons-->
-    <form onsubmit="return false;">
-        <label for="daysRented">Days: </label><br>
-        <input type="number" id="daysRented" required><br>
-        <input type="submit" onclick="rentInput()">
-    </form>
 
     <h4 id="carModel"> </h4>
 
@@ -100,6 +87,30 @@
     </h4>
 
     <h3 id="selectedCar"></h3>
+
+    <!--<p id="carModel"> </p>-->
+
+    <h3> Duration</h3>
+
+    <!---- using "for" for accessibility reasons-->
+    <form onsubmit="return false;">
+        <label for="daysRented">Days: </label><br>
+        <input type="number" id="daysRented" required><br>
+        <input type="submit" onclick="rentInput()">
+    </form>
+
+    <h4 id="daysRentedMessage"></h4>
+
+    <h3> Insurance: $15 daily</h3>
+    
+    <label class="switch">
+        <input type="checkbox" checked>
+        <span class="INSslider"></span>
+    </label>
+
+    <button onclick="checkOut()">checkOut</button>
+
+    <h3 id="totalCost"></h3>
 
     <script src="htmleffects.js"></script>
 
