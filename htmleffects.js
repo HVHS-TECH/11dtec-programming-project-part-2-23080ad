@@ -56,8 +56,13 @@ function rentInput() {
     var daysRented = document.getElementById('daysRented');
     var daysRentedMessage = document.getElementById('daysRentedMessage');
     var rentFor = "Renting for: ";
-    if (daysRented.value == "" || daysRented.value == " " || daysRented.value < minDays || daysRented.value > maxDays) {
+    if (daysRented.value == "" || daysRented.value == " " || daysRented.value > maxDays) {
         rentFor = "Invalid input! <br>Input must be a number between 1 and 31!";
+        daysRented.value = 31;
+        daysRentedMessage.innerHTML = rentFor;
+    } else if (daysRented.value == "" || daysRented.value == " " || daysRented.value < minDays ) {
+         rentFor = "Invalid input! <br>Input must be a number between 1 and 31!";
+        daysRented.value = 1;
         daysRentedMessage.innerHTML = rentFor;
     } else {
         rentFor = rentFor + daysRented.value + " days";
@@ -193,10 +198,11 @@ function carOutPut8() {
     checkOut = "You have selected the " + carSelect + ".";
     selectedCar.innerHTML = checkOut;
 }
+var rentTotal = 0;
 
-
-function checkOut( ){
-    var rentTotal = daysRented * 10;
+function checkOut(){
+    
+    let rentTotal = daysRented.value * 10;
     var userReceipt = "Youre final cost totals at: $" + rentTotal;
     totalCost.innerHTML = userReceipt;
 }
