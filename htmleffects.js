@@ -22,7 +22,7 @@ This value is then displayed through a paragraph tag using innerHTML.
 
 function updateCarDetails() {
     let carResult = document.getElementById('carResult');
-    carResult.innerHTML = "Number of seats: " + seatPicker.value;
+    carResult.innerHTML = "Preffered number of seats: " + seatPicker.value;
 
     let carModel = document.getElementById('carModel');
     carModel.innerHTML = "Suggested car model: " + allCars[seatPicker.value];
@@ -71,6 +71,7 @@ function rentInput() {
     }
 }
 
+//These functions create the images of each car
 
 //Bac-mono image javascript
 var img = document.createElement('img');
@@ -198,7 +199,11 @@ function carOutPut8() {
     let message = "You have selected the " + carSelect + ".";
     document.getElementById('selectedCar').innerHTML = message;
 }
+/********************************************************************************************************************************/
 
+
+/**makes it so that when the insurance checkbox is ticked and unticked
+ the insurance cost is added or deducted from the final cost as needed.*/
 var insVal = 0;
 function insUpdate() {
     var checkBox = document.getElementById("insuranceBox");
@@ -212,15 +217,13 @@ function insUpdate() {
     }
 }
 
+//calculates the cost of renting a the car. Then prints a receipt displaying the details of teh users purchase
 function checkOut() {
     var totalCost = document.getElementById("totalCost");
     rentTotal = parseInt(daysRented.value, 10) * 10 + insVal;
     var userReceipt = "Your final cost totals at $" + rentTotal + ". You are now renting the " + carSelect + " for " + daysRented.value + " Days.";
     totalCost.innerHTML = userReceipt;
 }
-
-
-
 
 seatsDropDown();
 
