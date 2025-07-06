@@ -103,15 +103,16 @@
 
     <h3> Insurance: $15 daily</h3>
     
-    <label class="switch">
-        <input type="checkbox" checked>
-        <span class="INSslider"></span>
-    </label>
+    <label for="insuranceBox">Insurance: </label>
+        <input type="checkbox" id="insuranceBox" onclick="insUpdate()">
+    <p id="insResult" style="display:none">Insurance Purchased!</p>
+    
 
-    <button onclick="checkOut()">checkOut</button>
+    <button onclick="checkOut()">Submit</button>
 
-    <h3 id="totalCost"></h3>
+    <div id="totalCost"></div>
 
     <script src="htmleffects.js"></script>
 
 </body>
+

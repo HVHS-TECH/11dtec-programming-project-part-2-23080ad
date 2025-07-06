@@ -1,6 +1,6 @@
 /**This is the styling for a check box "INSslider".
  This styling uses "webkit transformation" to provide crude animation the the slider,
- which helps distinguish between on and off states.*/
+ which helps distinguish between on and off states.
 
 .switch {
   position: relative;
